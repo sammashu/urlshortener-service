@@ -11,7 +11,7 @@ and the other one for the short url with a key.
 ## How to Run first solution
 
 - Clone the project
-- Configure Redis password in application.yml there is default password if using docker
+- Configure Redis password in application.properties there is default password if using docker
 - installing redis in your local machine
 - Build the project  
 ```
