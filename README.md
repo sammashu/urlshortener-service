@@ -1,6 +1,6 @@
 # UrlShortener with redis
-Not the best solution when generate short url this create 2 entry in redis one for original url has a key 
-and the other one for the short url has a key.
+Not the best solution when generate short url this create 2 entry in redis one for original url with a key 
+and the other one for the short url with a key.
 
 ## Requirements
 * Java 8
