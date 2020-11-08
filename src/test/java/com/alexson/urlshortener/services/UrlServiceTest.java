@@ -4,7 +4,6 @@ import com.alexson.urlshortener.config.TestRedisConfiguration;
 import com.alexson.urlshortener.models.Url;
 import com.alexson.urlshortener.models.exceptions.InvalidUrlException;
 import com.alexson.urlshortener.models.exceptions.NoDataFoundException;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +26,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void generateShortUrlValidate10Character() throws NoSuchAlgorithmException, JsonProcessingException {
+    public void generateShortUrlValidate10Character() throws NoSuchAlgorithmException {
         Url url = new Url("","http://www.google.com", null);
         String shortUrl = urlService.getShortUrl(url);
         Assert.assertEquals(10, shortUrl.substring(shortUrl
@@ -35,7 +34,7 @@ public class UrlServiceTest {
     }
 
     @Test(expected = InvalidUrlException.class)
-    public void invalidUrlException() throws NoSuchAlgorithmException, JsonProcessingException {
+    public void invalidUrlException() throws NoSuchAlgorithmException {
         Url url = new Url("","www.google.com", null);
         urlService.getShortUrl(url);
     }
