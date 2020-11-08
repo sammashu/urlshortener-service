@@ -14,7 +14,7 @@ and the other one for the short url with a key.
 - Configure Redis password in application.properties there is default password if using docker
 - installing redis in your local machine
 - Build the project  
-- Remove anything from application.properties if using your own local redis
+- Remove everything inside application.properties if using your own local redis
 ```
 mvn clean install
 ```
